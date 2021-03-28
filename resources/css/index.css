@@ -89,21 +89,42 @@ h3 {
 	font-size: 1.2rem;
 }
 
-section {
-}
+/* section {
+} */
 
 .razdel {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: 80px auto auto auto auto auto;
+	grid-template-rows: 80px auto auto auto auto auto auto;
 	grid-gap: 5px;
 }
 
 .izdeliya {
-	grid-area: 
+	grid-row: 2 / 3;
+	grid-column: 2 / 4;
 }
 
-/*.imageWindow {
+.predlozheniya {
+	grid-row: 3 / 4;
+	grid-column: 5 / 6;
+}
+
+.raboty {
+	grid-row: 4 / 5;
+	grid-column: 2 / 5;
+}
+
+.obucheniye {
+	grid-row: 5 / 6;
+	grid-column: 2 / 5;
+}
+
+.contacts {
+	grid-row: 6 / 7;
+	grid-column: 2 / 5;
+}
+
+.imageWindow {
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -125,4 +146,4 @@ section {
 	align-items: center;
 	justify-content: space-around;
 	flex-wrap: wrap;
-}*/
+}
