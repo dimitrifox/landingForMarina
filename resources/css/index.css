@@ -1,142 +1,157 @@
 @font-face {
-	font-family: "Montserrat";
-	src: url(../../resources/fonts/Montserrat-Regular.ttf) format('truetype');
-}
-
-
-@font-face {
-	font-family: "MontserratBold";
-	src: url(../../resources/fonts/Montserrat-Bold.ttf) format('truetype');
+  font-family: "Montserrat";
+  src: url(../../resources/fonts/Montserrat-Regular.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: "NunitoExtraBold";
-	src: url(../../resources/fonts/Nunito-ExtraBold.ttf) format('truetype');
+  font-family: "MontserratBold";
+  src: url(../../resources/fonts/Montserrat-Bold.ttf) format("truetype");
 }
 
-html {font-size: 20px;}
+@font-face {
+  font-family: "NunitoExtraBold";
+  src: url(../../resources/fonts/Nunito-ExtraBold.ttf) format("truetype");
+}
+
+html {
+  font-size: 20px;
+}
 
 body {
-	margin: 0;
-	padding: 0;
-	font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
 }
 
 header {
-	display: grid;
-	grid-template: 80px / 100vw;
-	justify-items: center;
-	grid-template-areas: "header-nav";
-	position: fixed;
-	background-color: #fff;
-	opacity: 0.75;
+  display: grid;
+  grid-template: 80px / 100vw;
+  justify-items: center;
+  grid-template-areas: "header-nav";
+  position: fixed;
+  background-color: #fff;
+  opacity: 0.75;
 }
 
 nav {
-	grid-area: header-nav;
-	justify-self: center;
-	align-self: center;
-	display: grid;
-	grid-template-columns: repeat(4, 150px);
-	font-size: 0.9rem;
+  grid-area: header-nav;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  font-size: 0.9rem;
 }
-
-
 
 nav a {
-	text-decoration: none;
-	text-align: center;
-	position: relative;
-	transition: color .2s;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  transition: color 0.2s;
 }
 
-a, a:visited {
-	color: #000;
+a,
+a:visited {
+  color: #000;
 }
 
-a:before, a:after {
-	content: "";
-	position: absolute;
-	height: 10px;
-	top: -31px;
-	right: 50%;
-	left: 50%;
-	background: #5360FE;
-	transition: .3s;
+a:before,
+a:after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  top: -31px;
+  right: 50%;
+  left: 50%;
+  background: #5360fe;
+  transition: 0.3s;
 }
 
-a:hover:before {left: 0; border-bottom-left-radius: 10px;}
-a:hover:after {right: 0; border-bottom-right-radius: 10px;}
+a:hover:before {
+  left: 0;
+  border-bottom-left-radius: 10px;
+}
+a:hover:after {
+  right: 0;
+  border-bottom-right-radius: 10px;
+}
 
-a:hover {font-family: "MontserratBold"; color: #292930; }
+a:hover {
+  font-family: "MontserratBold";
+  color: #292930;
+}
 
 h1 {
-	font-family: "NunitoExtraBold";
-	font-size: 3.2rem;
-	line-height: 3.25rem;
+  font-family: "NunitoExtraBold";
+  font-size: 3.2rem;
+  line-height: 3.25rem;
 }
 
 h3 {
-	font-family: "MontserratBold";
-	font-size: 1.2rem;
+  font-family: "MontserratBold";
+  font-size: 1.2rem;
 }
 
 section {
-	padding-top: 50px;
+  padding-top: 50px;
 }
 
 .razdel {
-	background-image: url(../images/firstBG_copy.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	display: grid;
-	height: 1200px;
-	grid-template: 2fr 1fr 2fr / 1fr 1fr;
-	grid-template-areas: "razdel_izdeliya ."
-	". ."
-	". razdel_predlozheniya";
-	padding: 0 10vw;;
+  background-image: url(../images/firstBG_copy.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  height: 1200px;
+  grid-template: 2fr 1fr 2fr / 1fr 1fr;
+  grid-template-areas:
+    "razdel_izdeliya ."
+    ". ."
+    ". razdel_predlozheniya";
+  padding: 0 10vw;
 }
 
 .izdeliya {
-	grid-area: razdel_izdeliya;
-	justify-self: end;
-	align-self: center;
+  grid-area: razdel_izdeliya;
+  justify-self: end;
+  align-self: center;
 }
 
 .predlozheniya {
-	grid-area: razdel_predlozheniya;
-	align-self: center;
-	justify-self: start;
+  grid-area: razdel_predlozheniya;
+  align-self: center;
+  justify-self: start;
 }
 
 .raboty {
-	grid-row: 4 / 5;
-	grid-column: 2 / 12;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  /* grid-template-rows: 1fr 2fr 2fr; */
+  padding: 200px 10%;
+  /* grid-template-areas: "zagolovok_primery zagolovok_primery"
+  "img_cell img_cell"
+  "img_cell img_cell"; */
+}
+
+.raboty :nth-child(1) {
+  grid-column: 1/3;
 }
 
 .imageWindow {
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 450px;
-	height: 350px;
-	border-radius: 16px;
+  min-height: 35vh;
+  background-size: cover;
+  background-position: center;
+  align-content: center;
+  border-radius: 16px;
 }
 
-.imageWindow img {
-	height: auto;
-	width: 100%;
-}
+
 
 .obucheniye {
-	grid-row: 5 / 6;
-	grid-column: 2 / 12;
+  grid-row: 5 / 6;
+  grid-column: 2 / 12;
 }
 
 .contacts {
-	grid-row: 6 / 7;
-	grid-column: 2 / 12;
+  grid-row: 6 / 7;
+  grid-column: 2 / 12;
 }
-
