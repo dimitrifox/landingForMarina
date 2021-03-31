@@ -23,43 +23,35 @@ body {
 }
 
 header {
-	display: flex;
+	display: grid;
+	grid-template: 80px / 100vw;
+	justify-items: center;
+	grid-template-areas: "header-nav";
 	position: fixed;
-	width: 100%;
-	height: 80px;
-	align-items: center;
-	justify-content: center;
 	background-color: #fff;
 	opacity: 0.75;
 }
 
 nav {
-	display: inline-flex;
-	position: fixed;
-	width: 90%;
-	justify-content: center;
+	grid-area: header-nav;
+	justify-self: center;
+	align-self: center;
+	display: grid;
+	grid-template-columns: repeat(4, 150px);
 	font-size: 0.9rem;
 }
 
-ul {
-	list-style: none;
-	text-align: center;
-}
 
-ul a {
-	width: 150px;
+
+nav a {
 	text-decoration: none;
+	text-align: center;
 	position: relative;
-	display: inline-block;
 	transition: color .2s;
 }
 
 a, a:visited {
 	color: #000;
-}
-
-li {
-	display: inline-block;
 }
 
 a:before, a:after {
@@ -70,7 +62,7 @@ a:before, a:after {
 	right: 50%;
 	left: 50%;
 	background: #5360FE;
-	transition: .8s;
+	transition: .3s;
 }
 
 a:hover:before {left: 0; border-bottom-left-radius: 10px;}
@@ -94,29 +86,28 @@ section {
 }
 
 .razdel {
-	display: grid;
-	grid-template: 80px repeat(6, auto) / repeat(12, 1fr);
-	grid-gap: 5px;
-}
-
-.firstBG {
-	display: grid;
-	grid-template: repeat(2, auto) / repeat(12, 1fr);
-	background-image: url(../images/firstPartBG.png);
+	background-image: url(../images/firstBG_copy.png);
 	background-size: cover;
 	background-repeat: no-repeat;
-	grid-row: 2 / 4;
-	grid-column: 1 / 13;
+	display: grid;
+	height: 1200px;
+	grid-template: 2fr 1fr 2fr / 1fr 1fr;
+	grid-template-areas: "razdel_izdeliya ."
+	". ."
+	". razdel_predlozheniya";
+	padding: 0 10vw;;
 }
 
 .izdeliya {
-	grid-row: 1 / 2;
-	grid-column: 2 / 7;
+	grid-area: razdel_izdeliya;
+	justify-self: end;
+	align-self: center;
 }
 
 .predlozheniya {
-	grid-row: 2 / 3;
-	grid-column: 8 / 12;
+	grid-area: razdel_predlozheniya;
+	align-self: center;
+	justify-self: start;
 }
 
 .raboty {
