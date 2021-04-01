@@ -152,6 +152,51 @@ section {
 }
 
 .contacts {
-  grid-row: 6 / 7;
-  grid-column: 2 / 12;
+  display: grid;
+  background-image: url(../images/bg_image.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  margin: 0 10%;
+  padding-bottom: 330px;
+  grid-template-columns: 1fr;
+  color: #fff;
+  padding-top: 0;
 }
+
+.contacts h1 {
+  padding-left: 150px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+address {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 50px;
+}
+
+address :nth-child(1) {
+  grid-column: 2/3;
+}
+
+address :nth-child(2) {
+  grid-column: 2/3;
+}
+
+address :nth-child(3) {
+  grid-column: 2/3;
+}
+
+address :nth-child(4) {
+  grid-column: 2/3;
+}
+
+address a {
+  padding: 20px;
+  color:#fff;
+  text-decoration: none;
+  font-style: normal;
+}
+
+
