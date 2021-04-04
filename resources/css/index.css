@@ -144,8 +144,6 @@ section {
   border-radius: 16px;
 }
 
-
-
 .obucheniye {
   grid-row: 5 / 6;
   grid-column: 2 / 12;
@@ -198,5 +196,3 @@ address a {
   text-decoration: none;
   font-style: normal;
 }
-
-
