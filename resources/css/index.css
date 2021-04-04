@@ -125,11 +125,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-  /* grid-template-rows: 1fr 2fr 2fr; */
   padding: 200px 10%;
-  /* grid-template-areas: "zagolovok_primery zagolovok_primery"
-  "img_cell img_cell"
-  "img_cell img_cell"; */
 }
 
 .raboty :nth-child(1) {
@@ -170,7 +166,7 @@ section {
 
 address {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 1fr 3fr;
   padding-top: 50px;
 }
 
